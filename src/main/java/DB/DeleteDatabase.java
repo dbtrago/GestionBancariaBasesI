@@ -1,0 +1,35 @@
+package DB;
+
+import java.sql.Connection;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Chandan Das
+ */
+public class DeleteDatabase {
+      
+      
+      //  data.clear();
+      //  data.removeAll(data);
+       public static void deleteRecord(int id,String tableName){
+        Connection c ; 
+           
+           try{  
+         c = DBConnection.getConnection();
+        
+         String query = "Delete from "+tableName+" where id='"+id+"';";
+         c.createStatement().execute(query);
+         c.close();
+         
+           
+       }catch(Exception e){  
+        System.out.println("Error on Building Data");        
+      }  
+       }
+}

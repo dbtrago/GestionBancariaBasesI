@@ -1,0 +1,19 @@
+
+l
+java:S3740Û"/Provide the parametrized type for this generic.(¤¯ÒJ$bb2743f3-92ee-41ff-978d-fb07a98014b0
+˜
+java:S2095«"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(‹Æ”ÿÿÿÿÿ8¬şŞ¬ë1J$536135d9-a3b2-4a3a-91c8-630793db36bf
+‹
+java:S2095¿"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿8¬şŞ¬ë1J$164c5fab-31a3-45d2-adb6-4aa6c4392d5e
+‹
+java:S2095¶"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿8¬şŞ¬ë1J$5f41e59c-6dc8-43b2-b81d-ccbcb70620d1
+‹
+java:S2095é"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿8¬şŞ¬ë1J$c85f6c88-5365-4ad5-8ad7-0f3d59eba7d3
+z
+java:S1854O"9Remove this useless assignment to local variable "autoT".(ãêß•øÿÿÿÿJ$4424b4df-bd0b-4dba-aeb2-5ac4b08582f9
+k
+java:S1481O"*Remove this unused "autoT" local variable.(ãêß•øÿÿÿÿJ$d5587e21-9237-4e08-93ad-02d4529cb739
+“
+java:S3776e"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(Á»úÃüÿÿÿÿJ$73d7725b-2e4f-4a5a-ad11-ea81162bccfe
+Š
+java:S3252«"HUse static access with "java.sql.Statement" for "RETURN_GENERATED_KEYS".(‹Æ”ÿÿÿÿÿJ$d08505ff-66aa-4874-93bf-78110a5604c6

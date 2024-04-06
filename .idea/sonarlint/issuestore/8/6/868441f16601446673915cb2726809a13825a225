@@ -1,0 +1,27 @@
+
+l
+java:S3740Õ"/Provide the parametrized type for this generic.(¤¯ÒJ$04998f6a-be77-4bee-a31f-18bc0165b577
+‚
+java:S1192W"FDefine a constant instead of duplicating this literal "Debit" 4 times.(ê€Í„J$d32ec822-01ec-4eaa-82a7-c6dbf6449a87
+q
+java:S1066‡"/Merge this if statement with the enclosing one.(ãÚØãıÿÿÿÿJ$386e50d8-e85e-4e08-90c2-53a20b58ae91
+‹
+java:S2095ç"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿8ˆ¨¯¬ë1J$57570d0e-d345-4e86-8f64-58295e972253
+‹
+java:S2095©"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿8ˆ¨¯¬ë1J$a35db28a-d341-41fc-b1ce-a49c2cd52f38
+‹
+java:S2095¡"GUse try-with-resources or close this "Statement" in a "finally" clause.(¿êõ¿8³ËÚ¬ë1J$42149d2c-c6ad-44e3-a7de-d1ce21f28a89
+u
+java:S1854T"9Remove this useless assignment to local variable "autoT".(¶¤Æ±J$31ca95c6-c3ac-4f2d-8a82-1dae5435681b
+r	java:S106K"+Replace this use of System.out by a logger.(å‰ü½ûÿÿÿÿ8äÒÒ¬ë1J$c4e5ade8-645f-47f8-b04f-862c22d84b01
+f
+java:S1481T"*Remove this unused "autoT" local variable.(¶¤Æ±J$9341a0d4-4601-4844-b010-4adab15d676a
+	java:S100_"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ‚ììøÿÿÿÿJ$a0d43ef6-1d94-493f-8cb9-8981434f175e
+“
+java:S3776_"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.( ‚ììøÿÿÿÿJ$59376e66-88b9-4c8f-8f29-489f7286666a
+y
+java:S1128"6Remove this unused import 'javafx.fxml.Initializable'.(™ÎùÆ8¨îÚ¬ë1J$3d9a8896-61ad-4543-b917-966a81d585a8
+K
+java:S1128")Remove this unused import 'java.net.URL'.(ñìÁ„üÿÿÿÿ8èÅÛ¬ë1
+W
+java:S1128"5Remove this unused import 'java.util.ResourceBundle'.(ıÆ£¯øÿÿÿÿ8èÅÛ¬ë1

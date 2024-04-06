@@ -1,0 +1,12 @@
+
+‹
+java:S1104"OMake url a static final constant or non-public and provide accessors if needed.(Ó’üJ$68435798-181d-4119-b6d9-fd02a3580824
+e
+java:S1444")Make this "public static url" field final(Ó’üJ$e9e68bd5-c358-4be9-9527-c17b5ce8b09b
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒêÏïJ$bd9fc8aa-a767-4770-9e45-bb386bacee45
+T
+java:S2589"7Remove this expression which always evaluates to "true"(¤òª£8»¸œ¬ë1
+v
+java:S1118":Add a private constructor to hide the implicit public one.(® ©şJ$65ef0be8-1cfe-4a35-9e74-466d5cac9110
+m	java:S106"+Replace this use of System.out by a logger.(¿¬æö8‡Öˆ¬ë1J$a6d4adac-f864-4b0b-9bbc-a5e29f3a4a37
+r	java:S106"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8‡Öˆ¬ë1J$99f8b684-55f0-4669-beea-31b439a73bad

@@ -1,0 +1,27 @@
+
+k
+java:S3740"/Provide the parametrized type for this generic.(òú¬J$fd08f474-a47b-40a2-89b6-56d998870578
+p
+java:S3740#"/Provide the parametrized type for this generic.(ñœÓ½úÿÿÿÿJ$4427abd2-4df5-449c-a8f2-98ffc06f57cf
+p
+java:S3740)"/Provide the parametrized type for this generic.(ë†˜ÍýÿÿÿÿJ$2557731b-bc7d-439a-bbcc-da369ea2cf4d
+k
+java:S3740>"/Provide the parametrized type for this generic.( ÌñÁJ$7fb40843-bdf6-4379-9b8b-c50c55ba69e5
+k
+java:S3740>"/Provide the parametrized type for this generic.( ÌñÁJ$3aab2dee-c067-45c1-9221-dade43ce026a
+k
+java:S3740@"/Provide the parametrized type for this generic.(°Ä£ßJ$9bc93acb-c65f-4bca-915c-c0653b933d63
+‘	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë†˜ÍýÿÿÿÿJ$20bc9194-b304-4025-bb73-0a0efdf23e41
+d
+java:S1604@"(Make this anonymous inner class a lambda(°Ä£ßJ$2d952967-a7b2-4f91-9b1a-f681115d148d
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒêÏïJ$3ee49113-e6da-403a-b5d8-e8762aa63503
+ˆ
+java:S3973*"GUse indentation to denote the code conditionally executed by this "if".(´ª¦ßûÿÿÿÿJ$1c663bcb-e58d-4e2e-b97d-f64de4dc7cfa
+‚
+java:S20955"GUse try-with-resources or close this "Statement" in a "finally" clause.(¦º›{J$97282cae-512a-4171-ad04-c7a7a08eb784
+|	java:S125."<This block of commented-out lines of code should be removed.(’‡üÿÿÿÿJ$d162d7c6-f1d5-4a0b-9ced-116ebb647079
+w	java:S1253"<This block of commented-out lines of code should be removed.(˜·„ŸJ$761dadb0-910d-4224-b6a9-b36022e23489
+w	java:S125\"<This block of commented-out lines of code should be removed.(…Ð¬åJ$ce38e478-06b2-4a52-b980-4e3a279835b7
+f	java:S106e"+Replace this use of System.out by a logger.(–Ú¤•J$0197f895-32ec-480d-9928-0cf473967856
+L	java:S106f"+Replace this use of System.err by a logger.(ïù¯¯ûÿÿÿÿ8©‡£¬ë1
+G	java:S106g"+Replace this use of System.err by a logger.(¾ˆµé8©‡£¬ë1
