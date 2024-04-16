@@ -103,7 +103,7 @@ public class AccountHolderSceneController implements Initializable {
         }
         cBranch.setItems(branchList);
         
-        accountData.buildData(acntHoldTable, "Select * from accountTable;");
+        accountData.buildData(acntHoldTable, "Select Account_Number, Account_Type, BCode, Name, Gender, DOB, Address, Aadhar, Balance from accountTable;");
         
          cDOB.setValue(LocalDate.now());
     }    
@@ -124,7 +124,7 @@ public class AccountHolderSceneController implements Initializable {
          
          
            
-            ResultSet rs= QueryDatabase.query("Select Count(Id) from accounttable where BCode ='"+branch+"';");
+            ResultSet rs= QueryDatabase.query("Select Count(Id) from accountTable where BCode ='"+branch+"';");
             if(rs==null){
             accountNumber = branch+"10001";
             }else{
@@ -140,8 +140,8 @@ public class AccountHolderSceneController implements Initializable {
             }
                    
             
-            String query = "INSERT INTO accounttable (Account_Number,Account_Type,BCode,Name,Gender,Dob,Address,Aadhar,Balance)VALUES("+
-           
+            String query = "INSERT INTO accountTable (Account_Number,Account_Type,BCode,Name,Gender,Dob,Address,Aadhar,Balance)VALUES("+
+
             "'"+accountNumber+"',\n" +
             "'"+type+"',\n" +
                      "'"+branch+"',\n" +
@@ -160,7 +160,7 @@ public class AccountHolderSceneController implements Initializable {
            
          }else{
               
-           String query = "Update accounttable set Account_Type='"+type+"',BCode='"+branch+"',Name='"+name+"',"
+           String query = "Update accountTable set Account_Type='"+type+"',BCode='"+branch+"',Name='"+name+"',"
                    + "Gender='"+gender+"',Dob='"+dob+"',Address='"+address+"',Aadhar='"+aadhar+"' Where Id='"+id+"';";
                   System.out.println(query);
            c.createStatement().execute(query);

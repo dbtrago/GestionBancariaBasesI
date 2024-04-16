@@ -76,10 +76,10 @@ public class ServiceSceneController implements Initializable {
         
         }
       
-      AutoCompletionBinding<String> autoT = TextFields.bindAutoCompletion(sAccNum,accList); 
+      //AutoCompletionBinding<String> autoT = TextFields.bindAutoCompletion(sAccNum,accList);
      
      
-      tData.buildData(sTableView, "Select * from serviceTable");
+      tData.buildData(sTableView, "Select * from servicetable");
     }    
 
 
@@ -141,7 +141,7 @@ public class ServiceSceneController implements Initializable {
         try{ 
            
                 
-               ResultSet rs = QueryDatabase.query("Select Balance from accounttable where Account_Number ='"+accNum+"';");
+               ResultSet rs = QueryDatabase.query("Select Balance from accountTable where Account_Number ='"+accNum+"';");
                if(rs!=null){
                    if(rs.next()){
                        balance = Double.parseDouble(rs.getString(1));
@@ -178,10 +178,10 @@ public class ServiceSceneController implements Initializable {
          balance-=amt;
        
         
-        query = "Update accounttable set Balance='"+balance+"' where Account_Number='"+accNum+"';";
+        query = "Update accountTable set Balance='"+balance+"' where Account_Number='"+accNum+"';";
          c.createStatement().execute(query);
          
-          query = "INSERT INTO Servicetable (Date,Account_Num,ServiceName,Description,Amount,TransactionId)VALUES("+
+          query = "INSERT INTO servicetable (Date,Account_Num,ServiceName,Description,Amount,TransactionId)VALUES("+
                             "'"+date+"',\n" +
                             "'"+accNum+"',\n" +
                              "'"+name+"',\n" +
@@ -228,7 +228,7 @@ public class ServiceSceneController implements Initializable {
             c = DBConnection.getConnection();
             String query="";
                          
-            query = "Update accounttable set Balance=Balance+"+itemData.get(4)+" where Account_Number='"+itemData.get(1)+"';";
+            query = "Update accountTable set Balance=Balance+"+itemData.get(4)+" where Account_Number='"+itemData.get(1)+"';";
                     
             c.createStatement().execute(query);
            

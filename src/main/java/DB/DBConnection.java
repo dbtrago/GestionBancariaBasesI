@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class DBConnection {  
    private static Connection connection;
    
-   public static String url = "jdbc:mysql://localhost:3306/bank?allowPublicKeyRetrieval=true&useSSL=false";
+   public static String url = "jdbc:mysql://localhost:3360/bank?allowPublicKeyRetrieval=true&useSSL=false";
    private static String user = "root";//Username of database  
   private static String password = "root";//Password of database
 

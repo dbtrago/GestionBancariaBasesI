@@ -127,7 +127,7 @@ public class TransactoinSceneController {
         try{ 
            
                 
-               ResultSet rs = QueryDatabase.query("Select Balance from accounttable where Account_Number ='"+accNum+"';");
+               ResultSet rs = QueryDatabase.query("Select Balance from accountTable where Account_Number ='"+accNum+"';");
                if(rs!=null){
                    if(rs.next()){
                        balance = Double.parseDouble(rs.getString(1));
@@ -165,7 +165,7 @@ public class TransactoinSceneController {
          balance+=amt;
         }
         
-        query = "Update accounttable set Balance='"+balance+"' where Account_Number='"+accNum+"';";
+        query = "Update accountTable set Balance='"+balance+"' where Account_Number='"+accNum+"';";
          c.createStatement().execute(query);
          
           c.close();
@@ -222,9 +222,9 @@ public class TransactoinSceneController {
             String query="";
             if(itemData.get(3).equalsIgnoreCase("Debit")){
                 
-                query = "Update accounttable set Balance=Balance+"+itemData.get(4)+" where Account_Number='"+itemData.get(2)+"';";
+                query = "Update accountTable set Balance=Balance+"+itemData.get(4)+" where Account_Number='"+itemData.get(2)+"';";
             }else{
-                query = "Update accounttable set Balance=Balance-"+itemData.get(4)+" where Account_Number='"+itemData.get(2)+"';";
+                query = "Update accountTable set Balance=Balance-"+itemData.get(4)+" where Account_Number='"+itemData.get(2)+"';";
                 
             }
             

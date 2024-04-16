@@ -74,7 +74,7 @@ public class BranchEmployeeSceneController implements Initializable {
         }
         cBranch.setItems(branchList);
         
-        empData.buildData(eTableView, "Select * from EmployeeTable Order By (Id) desc;");
+        empData.buildData(eTableView, "Select * from employeetable Order By (Id) desc;");
         
     }    
  
@@ -107,7 +107,7 @@ public class BranchEmployeeSceneController implements Initializable {
             Connection c;
             try{
             c = DBConnection.getConnection();
-            String query = "INSERT INTO BranchTable (Name,BCode,Address) VALUES("+
+            String query = "INSERT INTO branchtable (Name,BCode,Address) VALUES("+
             "'"+branchName+"',\n" +
             "'"+branchCode+"',\n" +
             "'"+branchLoc+"');";                    
@@ -155,7 +155,7 @@ public class BranchEmployeeSceneController implements Initializable {
             Connection c;
             try{
             c = DBConnection.getConnection();
-            String query = "INSERT INTO EmployeeTable (Name,Branch) VALUES("+
+            String query = "INSERT INTO employeetable (Name,Branch) VALUES("+
             "'"+empName+"',\n" +
             "'"+branchCode+"');";                    
           
@@ -170,7 +170,7 @@ public class BranchEmployeeSceneController implements Initializable {
            eName.clear();
            
           
-          empData.buildData(eTableView, "Select * from EmployeeTable Order By (Id) desc;");
+          empData.buildData(eTableView, "Select * from employeetable Order By (Id) desc;");
            
            
     }
@@ -181,10 +181,10 @@ public class BranchEmployeeSceneController implements Initializable {
         String query="";
         String name = eSName.getText();
         if(name!=null && !name.isEmpty()){
-        query = "Select * from EmployeeTable where Name Like '%"+name+"%';";
+        query = "Select * from employeetable where Name Like '%"+name+"%';";
         
         }else{
-        query = "Select * from EmployeeTable;";
+        query = "Select * from employeetable;";
         
         }
         
