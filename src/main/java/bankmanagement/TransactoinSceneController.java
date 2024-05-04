@@ -68,21 +68,21 @@ public class TransactoinSceneController {
     private TextField sAccNum;
 
     public void initialize() {
+
         ResultSet rs = QueryDatabase.query("SELECT Account_Number FROM accountTable;");
         if(rs!=null){
             try {
                 while(rs.next()){
-                    System.out.println(rs.getString(1));
-
+                    accList.add(rs.getString(1));
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(TransactoinSceneController.class.getName()).log(Level.SEVERE, null, ex);
             }
-        
+
         }
-      
-      AutoCompletionBinding<String> autoT = TextFields.bindAutoCompletion(tAccNum,accList); 
-     
+
+      //AutoCompletionBinding<String> autoT = TextFields.bindAutoCompletion(tAccNum,accList);
+
       typeList.add("Credit");
       typeList.add("Debit");
       ctType.setItems(typeList);
@@ -237,10 +237,7 @@ public class TransactoinSceneController {
         } catch (SQLException ex) {
             Logger.getLogger(TransactoinSceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
-      
-      
-      
-      
+
     }
     
 }
