@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
-<AnchorPane id="AnchorPane" fx:id="tranServAnchor" prefHeight="562.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.TransactoinSceneController">
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="tranServAnchor" prefHeight="562.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.TransactoinSceneController">
    <children>
-      <SplitPane dividerPositions="0.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.40057940479325777" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
-            <GridPane prefHeight="261.0" prefWidth="296.0">
+            <GridPane prefHeight="261.0" prefWidth="296.0" style="-fx-background-color: #F4F7FC;">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="160.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="78.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.00003051757812" minWidth="10.0" prefWidth="142.39999389648438" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.39996337890625" minWidth="10.0" prefWidth="175.99996948242188" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="8.000036621093727" prefWidth="8.000036621093727" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -43,45 +44,49 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Account No :" GridPane.rowIndex="3" />
-                  <TextField fx:id="tAccNum" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Transaction Type" GridPane.rowIndex="4" />
-                  <ComboBox fx:id="ctType" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Amount :" GridPane.rowIndex="5" />
-                  <TextField fx:id="tAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="367.0" style="-fx-background-color: #ff4565;" text="Transaction" textFill="WHITE" GridPane.columnSpan="2">
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Numero de cuenta: " textFill="#02030a" GridPane.rowIndex="3" />
+                  <TextField fx:id="tAccNum" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Tipo de transacción: " textFill="#02030a" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="ctType" prefHeight="27.0" prefWidth="161.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Monto: " textFill="#02030a" GridPane.rowIndex="5" />
+                  <TextField fx:id="tAmount" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER" prefHeight="28.0" prefWidth="367.0" text="Transacción" textFill="#02030a" GridPane.columnSpan="2">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <Button fx:id="addTranBtn" mnemonicParsing="false" onAction="#AddTransaction" prefHeight="25.0" prefWidth="192.0" text="Add Transaction" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button fx:id="addTranBtn" mnemonicParsing="false" onAction="#AddTransaction" prefHeight="25.0" prefWidth="192.0" stylesheets="@../Styles/style.css" text="Agregar transacción" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <Label fx:id="tWarnMsg" prefHeight="40.0" prefWidth="375.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Date :" GridPane.rowIndex="2" />
-                  <DatePicker fx:id="tDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Fecha: " textFill="#02030a" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="tDate" styleClass="toggle-button" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
-            <SplitPane dividerPositions="0.2638190954773869" orientation="VERTICAL">
+            <SplitPane dividerPositions="0.1340941512125535" orientation="VERTICAL">
                <items>
-                  <GridPane>
+                  <GridPane style="-fx-background-color: #F4F7FC;">
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.20001220703125" minWidth="8.4000244140625" prefWidth="8.4000244140625" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.99998779296874" minWidth="10.0" prefWidth="290.99998779296874" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.20001220703125" minWidth="5.399975585937511" prefWidth="5.399975585937511" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.3999267578125" minWidth="10.0" prefWidth="135.80009765625002" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.4000244140625" minWidth="10.0" prefWidth="10.999902343750023" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
-                      <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="3.199993896484375" prefHeight="5.2" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="22.8" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="45.4" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="346.0" style="-fx-background-color: #ff4565;" text="Search Transactions" textFill="WHITE" GridPane.columnSpan="2">
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="346.0" text="Buscar transacciones" textFill="#02030a" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="sAccNum" promptText="Account Number" GridPane.rowIndex="1" />
-                        <Button fx:id="srchTranServBtn1" mnemonicParsing="false" onAction="#searchT" prefHeight="25.0" prefWidth="157.0" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="sAccNum" promptText="Numero de cuenta" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="srchTranServBtn1" mnemonicParsing="false" onAction="#searchT" prefHeight="25.0" prefWidth="157.0" stylesheets="@../Styles/style.css" text="Buscar" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
-                  <TableView fx:id="tTableView" prefHeight="398.0" prefWidth="296.0">
+                  <TableView fx:id="tTableView" prefHeight="391.0" prefWidth="377.0" stylesheets="@../Styles/style.css">
                      <contextMenu>
                         <ContextMenu>
                           <items>
