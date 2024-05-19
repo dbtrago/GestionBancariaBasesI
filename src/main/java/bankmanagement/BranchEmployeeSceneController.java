@@ -45,6 +45,10 @@ public class BranchEmployeeSceneController implements Initializable {
     @FXML
     private TextField eName;
     @FXML
+    private TextField bDirector;
+    @FXML
+    private TextField bMoney;
+    @FXML
     private ComboBox<String> cBranch;
     @FXML
     private TableView<?> eTableView;
@@ -81,36 +85,51 @@ public class BranchEmployeeSceneController implements Initializable {
     String branchCode="";
     String branchName="";
     String branchLoc="";
+    String branchDirector="";
+    String branchPresupuesto="";
     
     @FXML
     private void addBranch(ActionEvent event) {
         branchCode = bCode.getText();
         branchName = bName.getText();
         branchLoc = bLoc.getText();
+        branchDirector = bDirector.getText();
+        branchPresupuesto = bMoney.getText();
         
         if(branchCode==null || branchCode.isEmpty()){
-           warnMsg.setText("Enter Branch Code.");
+           warnMsg.setText("Ingresar el codigo de la sucursal.");
            bCode.requestFocus();
             return;
         }
            if(branchName==null || branchName.isEmpty()){
-           warnMsg.setText("Enter Branch Name.");
+           warnMsg.setText("Ingresar el nombre de la sucursal.");
            bName.requestFocus();
             return;
         }
            if(branchLoc==null || branchLoc.isEmpty()){
-           warnMsg.setText("Enter Branch Location.");
+           warnMsg.setText("Ingresar la ubicación de la sucursal.");
            bLoc.requestFocus();
             return;
         }
-           
+            if(branchDirector==null || branchDirector.isEmpty()){
+            warnMsg.setText("Ingresar el director de la sucursal.");
+            bLoc.requestFocus();
+            return;
+        }
+            if(branchPresupuesto==null || branchPresupuesto.isEmpty()){
+            warnMsg.setText("Ingresar el presupuesto de la sucursal.");
+            bLoc.requestFocus();
+            return;
+        }
             Connection c;
             try{
             c = DBConnection.getConnection();
-            String query = "INSERT INTO branchtable (Name,BCode,Address) VALUES("+
+            String query = "INSERT INTO branchtable (Name,BCode,Address,director,presupuesto) VALUES("+
             "'"+branchName+"',\n" +
             "'"+branchCode+"',\n" +
-            "'"+branchLoc+"');";                    
+            "'"+branchLoc+"',\n" +
+            "'"+branchDirector+"',\n" +
+            "'"+branchPresupuesto+"');";
           
             c.createStatement().execute(query);
             
@@ -123,12 +142,10 @@ public class BranchEmployeeSceneController implements Initializable {
            bName.clear();
            bCode.clear();
            bLoc.clear();
-          
+           bDirector.clear();
+           bMoney.clear();
            branchList.add(branchCode);
-           
-           
-            
-        
+
     }
 
     String empName="";

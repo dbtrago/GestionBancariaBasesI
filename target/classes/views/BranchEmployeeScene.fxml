@@ -42,24 +42,28 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="48.0" prefWidth="333.0" text="Registro de empleados" textFill="#02030a" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                        <Label alignment="CENTER" prefHeight="48.0" prefWidth="333.0" text="Registro de empleados" textFill="#02030a" GridPane.columnSpan="2" GridPane.rowIndex="7">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Nombre de la sucursal: " textFill="#02030a" GridPane.rowIndex="3" />
-                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Ubicación de la sucursal: " textFill="#02030a" GridPane.rowIndex="4" />
-                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Nombre: " textFill="#02030a" GridPane.rowIndex="7" />
-                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Sucursal: " textFill="#02030a" GridPane.rowIndex="8" />
-                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Código de sucursal: " textFill="#02030a" GridPane.rowIndex="2" />
-                        <TextField fx:id="bCode" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField fx:id="bName" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField fx:id="bLoc" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextField fx:id="eName" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <Button mnemonicParsing="false" onAction="#addBranch" prefHeight="25.0" prefWidth="159.0" stylesheets="@../Styles/style.css" text="Agregar sucursal" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Button mnemonicParsing="false" onAction="#addEmployee" prefHeight="28.0" prefWidth="145.0" stylesheets="@../Styles/style.css" text="Agregar empleado" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                        <ComboBox fx:id="cBranch" prefWidth="150.0" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Label fx:id="warnMsg" alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="354.0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Nombre de la sucursal: " textFill="#02030a" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Ubicación de la sucursal: " textFill="#02030a" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Nombre: " textFill="#02030a" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Sucursal: " textFill="#02030a" GridPane.rowIndex="9" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Código de sucursal: " textFill="#02030a" GridPane.rowIndex="1" />
+                        <TextField fx:id="bCode" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="bName" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="bLoc" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="eName" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Button mnemonicParsing="false" onAction="#addBranch" prefHeight="25.0" prefWidth="159.0" stylesheets="@../Styles/style.css" text="Agregar sucursal" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Button mnemonicParsing="false" onAction="#addEmployee" prefHeight="28.0" prefWidth="145.0" stylesheets="@../Styles/style.css" text="Agregar empleado" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <ComboBox fx:id="cBranch" prefWidth="150.0" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Label fx:id="warnMsg" alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="144.0" textFill="#cf0000" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="119.0" prefHeight="88.0" prefWidth="205.0" text="Director de la sucursal: " textFill="#02030a" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="156.0" prefHeight="88.0" prefWidth="205.0" text="Presupuesto anual: " textFill="#02030a" GridPane.rowIndex="5" />
+                        <TextField fx:id="bDirector" layoutX="157.0" layoutY="124.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="bMoney" layoutX="157.0" layoutY="160.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                </children>
