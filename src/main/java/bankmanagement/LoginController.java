@@ -40,6 +40,12 @@ public class LoginController {
 
     private BankManagement bankManagement;
 
+    private Alert alert;
+
+    private DialogPane dialog;
+
+    private static LoginController loginController;
+
     @FXML
     void abrirDashboard(ActionEvent event) throws IOException {
         if (recibirDatos()) {
@@ -124,9 +130,12 @@ public class LoginController {
 
     void limpiar (){txtContra.setText(null);}
 
-    private Alert alert;
-
-    private DialogPane dialog;
+    public static LoginController getInstance() {
+        if(loginController == null){
+            loginController = new LoginController();
+        }
+        return loginController;
+    }
     public void mensaje (String titulo, String contenido, String Tipo){
 
 
