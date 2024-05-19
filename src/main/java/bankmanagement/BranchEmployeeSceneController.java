@@ -52,7 +52,16 @@ public class BranchEmployeeSceneController implements Initializable {
     private ComboBox<String> cBranch;
     @FXML
     private TableView<?> eTableView;
-
+    @FXML
+    private TextField eCargo;
+    @FXML
+    private TextField eCedula;
+    @FXML
+    private TextField eDireccion;
+    @FXML
+    private TextField eProfesion;
+    @FXML
+    private TextField eTelefono;
     /**
      * Initializes the controller class.
      */
@@ -125,11 +134,11 @@ public class BranchEmployeeSceneController implements Initializable {
             try{
             c = DBConnection.getConnection();
             String query = "INSERT INTO branchtable (Name,BCode,Address,director,presupuesto) VALUES("+
-            "'"+branchName+"',\n" +
-            "'"+branchCode+"',\n" +
-            "'"+branchLoc+"',\n" +
-            "'"+branchDirector+"',\n" +
-            "'"+branchPresupuesto+"');";
+                    "'"+branchName+"',\n" +
+                    "'"+branchCode+"',\n" +
+                    "'"+branchLoc+"',\n" +
+                    "'"+branchDirector+"',\n" +
+                    "'"+branchPresupuesto+"');";
           
             c.createStatement().execute(query);
             
@@ -148,23 +157,57 @@ public class BranchEmployeeSceneController implements Initializable {
 
     }
 
-    String empName="";
-    String empBranch="";
+    String emplName ="";
+    String emplCargo="";
+    String emplCedula="";
+    String emplDireccion="";
+    String emplProfesion= "";
+    String emplTelefono="";
     
     @FXML
     private void addEmployee(ActionEvent event) {
         
-        empName = eName.getText();
+        emplName = eName.getText();
         branchCode = cBranch.getValue();
+        emplCargo = eCargo.getText();
+        emplCedula = eCedula.getText();
+        emplDireccion = eDireccion.getText();
+        emplProfesion = eProfesion.getText();
+        emplTelefono = eTelefono.getText();
         
         if(branchCode==null || branchCode.isEmpty()){
-           warnMsg.setText("Select Branch Code.");
+           warnMsg.setText("Debe seleccionar el codigo de la sucursal.");
            cBranch.requestFocus();
             return;
         }
-           if(empName==null || empName.isEmpty()){
-           warnMsg.setText("Enter Employee's Name.");
+           if(emplName ==null || emplName.isEmpty()){
+           warnMsg.setText("Ingrese el nombre del empleado.");
            eName.requestFocus();
+            return;
+        }
+            if(emplCargo ==null || emplCargo.isEmpty()){
+            warnMsg.setText("Ingrese el cargo del empleado.");
+            eName.requestFocus();
+            return;
+        }
+            if(emplCedula ==null || emplCedula.isEmpty()){
+            warnMsg.setText("Ingrese la cedula del empleado.");
+            eName.requestFocus();
+            return;
+        }
+            if(emplDireccion ==null || emplDireccion.isEmpty()){
+            warnMsg.setText("Ingrese la dirección del empleado.");
+            eName.requestFocus();
+            return;
+        }
+            if(emplProfesion ==null || emplProfesion.isEmpty()){
+            warnMsg.setText("Ingrese la profesión del empleado.");
+            eName.requestFocus();
+            return;
+        }
+            if(emplTelefono ==null || emplTelefono.isEmpty()){
+            warnMsg.setText("Ingrese el teléfono del empleado.");
+            eName.requestFocus();
             return;
         }
          
@@ -172,9 +215,14 @@ public class BranchEmployeeSceneController implements Initializable {
             Connection c;
             try{
             c = DBConnection.getConnection();
-            String query = "INSERT INTO employeetable (Name,Branch) VALUES("+
-            "'"+empName+"',\n" +
-            "'"+branchCode+"');";                    
+            String query = "INSERT INTO employeetable (Name,Branch,cedula,telefono,cargo,profesion,direccion) VALUES("+
+                    "'"+ emplName +"',\n" +
+                    "'"+branchCode+"',\n" +
+                    "'"+emplCedula+"',\n" +
+                    "'"+emplTelefono+"',\n" +
+                    "'"+emplCargo+"',\n" +
+                    "'"+emplProfesion+"',\n" +
+                    "'"+emplDireccion+"');";
           
             c.createStatement().execute(query);
             
@@ -184,10 +232,14 @@ public class BranchEmployeeSceneController implements Initializable {
             Logger.getLogger(BranchEmployeeSceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
             
-           eName.clear();
-           
-          
-          empData.buildData(eTableView, "Select * from employeetable Order By (Id) desc;");
+        eName.clear();
+        eCargo.clear();
+        eCedula.clear();
+        eDireccion.clear();
+        eProfesion.clear();
+        eTelefono.clear();
+
+        empData.buildData(eTableView, "Select * from employeetable Order By (Id) desc;");
            
            
     }

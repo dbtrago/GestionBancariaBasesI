@@ -61,7 +61,7 @@ public class DisplayDatabase{
          final int j = i;          
          TableColumn col = new TableColumn(rs.getMetaData().getColumnName(i+1));  
        
-         col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){            
+         col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){
            public ObservableValue<String> call(CellDataFeatures<ObservableList, String> param) {                                                 
              return new SimpleStringProperty(param.getValue().get(j).toString());              
            }            
