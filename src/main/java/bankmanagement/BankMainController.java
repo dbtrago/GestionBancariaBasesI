@@ -68,6 +68,16 @@ public class BankMainController {
     }
 
     @FXML
+    private void setHelpScene(ActionEvent event) {
+        changeScene("/views/Help.fxml");
+    }
+
+    @FXML
+    private void setReportsScene(ActionEvent event) {
+        changeScene("/views/Reports.fxml");
+    }
+
+    @FXML
     void setActionSalir(ActionEvent event) throws IOException {
         loginController.mensaje("Cerra sesión", "Su sesión ha sido cerrada", "confirmacion");
         bankManagement.Login();

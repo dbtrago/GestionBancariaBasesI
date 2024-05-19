@@ -34,7 +34,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ToggleButton fx:id="acntHoldSceneBtn" mnemonicParsing="false" onAction="#setAcntHoldScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Titular de la Cuenta" GridPane.rowIndex="3">
+            <ToggleButton fx:id="acntHoldSceneBtn" mnemonicParsing="false" onAction="#setAcntHoldScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Cilentes" GridPane.rowIndex="3">
                <toggleGroup>
                   <ToggleGroup fx:id="group1" />
                </toggleGroup>
@@ -47,12 +47,12 @@
                </font>
             </Label>
             <ToggleButton fx:id="seviceBtn" mnemonicParsing="false" onAction="#setServiceScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Utilidades" toggleGroup="$group1" GridPane.rowIndex="5" />
-            <ToggleButton layoutX="10.0" layoutY="247.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Reportes/Consultas" GridPane.rowIndex="7">
+            <ToggleButton layoutX="10.0" layoutY="247.0" mnemonicParsing="false" onAction="#setReportsScene" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Reportes/Consultas" GridPane.rowIndex="7">
                <toggleGroup>
                   <ToggleGroup fx:id="group11" />
                </toggleGroup>
             </ToggleButton>
-            <ToggleButton mnemonicParsing="false" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Ayudas" GridPane.rowIndex="8">
+            <ToggleButton fx:id="btnHelp" mnemonicParsing="false" onAction="#setHelpScene" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Ayudas" GridPane.rowIndex="8">
                <toggleGroup>
                   <ToggleGroup fx:id="group111" />
                </toggleGroup>

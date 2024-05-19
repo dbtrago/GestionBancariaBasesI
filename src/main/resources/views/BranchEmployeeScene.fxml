@@ -12,13 +12,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="branchEmpAnchor" prefHeight="595.0" prefWidth="709.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.BranchEmployeeSceneController">
+<AnchorPane id="AnchorPane" fx:id="branchEmpAnchor" prefHeight="628.0" prefWidth="709.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.BranchEmployeeSceneController">
    <children>
       <SplitPane dividerPositions="0.44133446423522754" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
             <AnchorPane prefHeight="623.0" prefWidth="312.0" style="-fx-background-color: #F4F7FC;" SplitPane.resizableWithParent="false">
                <children>
-                  <GridPane prefHeight="574.0" prefWidth="295.0">
+                  <GridPane prefHeight="602.0" prefWidth="295.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.79998779296875" minWidth="10.0" prefWidth="149.79998779296875" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="145.20001220703125" />
@@ -27,6 +27,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -64,7 +65,7 @@
                         <Button mnemonicParsing="false" onAction="#addBranch" prefHeight="25.0" prefWidth="159.0" stylesheets="@../Styles/style.css" text="Agregar sucursal" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                         <Button mnemonicParsing="false" onAction="#addEmployee" prefHeight="28.0" prefWidth="145.0" stylesheets="@../Styles/style.css" text="Agregar empleado" GridPane.columnIndex="1" GridPane.rowIndex="15" />
                         <ComboBox fx:id="cBranch" prefWidth="150.0" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                        <Label fx:id="warnMsg" alignment="CENTER_RIGHT" prefHeight="37.0" prefWidth="144.0" textFill="#cf0000" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                        <Label fx:id="warnMsg" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="300.0" textFill="#cf0000" GridPane.columnSpan="2" GridPane.rowIndex="16" />
                         <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="119.0" prefHeight="88.0" prefWidth="205.0" text="Director de la sucursal: " textFill="#02030a" GridPane.rowIndex="4" />
                         <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="156.0" prefHeight="88.0" prefWidth="205.0" text="Presupuesto anual: " textFill="#02030a" GridPane.rowIndex="5" />
                         <TextField fx:id="bDirector" layoutX="157.0" layoutY="124.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
