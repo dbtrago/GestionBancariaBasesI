@@ -35,15 +35,15 @@ public class BankManagement extends javafx.application.Application {
     public void start(Stage stage) throws Exception {
         bankManagement=this;
         this.primaryStage = stage;
-        Login(stage);
+        Login();
     }
 
-    public void Login(Stage stage) throws IOException {
+    public void Login() throws IOException {
         Pane pane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/views/Login.fxml")));
         Scene scene = new Scene(pane);
-        stage.getIcons().add(new Image("/Images/icon.png"));
-        stage.setScene(scene);
-        stage.show();
+        primaryStage.getIcons().add(new Image("/Images/icon.png"));
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public void Dashboard() throws IOException {

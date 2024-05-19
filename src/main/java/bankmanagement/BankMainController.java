@@ -15,6 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
+import java.io.IOException;
 import java.util.Objects;
 
 /**
@@ -40,8 +41,14 @@ public class BankMainController {
     private ToggleButton seviceBtn;
     @FXML
     private ToggleGroup group11;
+    @FXML
+    private ToggleButton btnSalir;
+    private BankManagement bankManagement;
+    private LoginController loginController;
 
     public void initialize() {
+        this.bankManagement = BankManagement.getInstance();
+        this.loginController = LoginController.getInstance();
          changeScene("/views/AccountHolderScene.fxml");
     }    
 
@@ -58,6 +65,12 @@ public class BankMainController {
     @FXML
     private void setTranScene(ActionEvent event) {
          changeScene("/views/TransactoinScene.fxml");
+    }
+
+    @FXML
+    void setActionSalir(ActionEvent event) throws IOException {
+        loginController.mensaje("Cerra sesión", "Su sesión ha sido cerrada", "confirmacion");
+        bankManagement.Login();
     }
     
      public  void changeScene(String scenePath){

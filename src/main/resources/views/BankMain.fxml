@@ -27,9 +27,9 @@
             <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="37.60000000000002" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="126.39999999999998" minHeight="10.0" prefHeight="33.60001220703123" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.19998779296873" minHeight="10.0" prefHeight="134.19998779296873" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
@@ -46,7 +46,22 @@
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <ToggleButton fx:id="seviceBtn" mnemonicParsing="false" onAction="#setServiceScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Servicios" toggleGroup="$group1" GridPane.rowIndex="5" />
+            <ToggleButton fx:id="seviceBtn" mnemonicParsing="false" onAction="#setServiceScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Utilidades" toggleGroup="$group1" GridPane.rowIndex="5" />
+            <ToggleButton layoutX="10.0" layoutY="247.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Reportes/Consultas" GridPane.rowIndex="7">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group11" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton mnemonicParsing="false" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Ayudas" GridPane.rowIndex="8">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group111" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="btnSalir" layoutX="10.0" layoutY="321.0" mnemonicParsing="false" onAction="#setActionSalir" prefHeight="32.0" prefWidth="122.0" styleClass="buttonSalir" stylesheets="@../Styles/style.css" text="Cerrar Sesión" textFill="RED" GridPane.rowIndex="11">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group1111" />
+               </toggleGroup>
+            </ToggleButton>
          </children>
       </GridPane>
    </left>

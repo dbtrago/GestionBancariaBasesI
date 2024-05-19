@@ -45,6 +45,20 @@ and open the template in the editor.
     -fx-background-color : #1620A1;
 }
 
+.buttonSalir
+{
+    -fx-border-radius: 50;
+    -fx-background-color : #05071F;
+    -fx-text-fill : #ff0000;
+}
+.buttonSalir:hover{
+    -fx-background-color : #5f1010;
+}
+.buttonSalir:pressed
+{
+    -fx-background-color : #a11616;
+}
+
 .text-field-buscar{
     -fx-background-color:  #ffffff;
     -fx-background-radius: 5;
