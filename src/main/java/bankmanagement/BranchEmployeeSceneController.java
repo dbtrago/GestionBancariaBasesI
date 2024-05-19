@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 /**
  * FXML Controller class
  *
- * @author Chandan Das
+ * @author Daniel Buitrago
  */
 public class BranchEmployeeSceneController implements Initializable {
 

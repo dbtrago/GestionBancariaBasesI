@@ -19,7 +19,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Chandan Das
+ * @author Daniel Buitrago
  */
 public class BankMainController {
     

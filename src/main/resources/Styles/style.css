@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 .toggle-button {
-    -fx-border-radius: 50;
+    -fx-border-radius: 5;
   -fx-color: #05071F;
 }
 
@@ -129,3 +129,28 @@ and open the template in the editor.
     -fx-background-radius: 2em;
 
 }
+
+/*DIALOG PARA MENSAJES*/
+
+.dialog {
+    -fx-background-color: #02030A;
+}
+
+.dialog-2 {
+    -fx-background-color:  #05071F;
+    -fx-background-radius: 25;
+}
+
+.dialog-pane:header .header-panel {
+    -fx-background-color:  #02030A;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: white;
+}
+
+.dialog-pane:header .header-panel .label {
+    -fx-font-weight: bold;
+    -fx-font-size: 2em;
+}
+
