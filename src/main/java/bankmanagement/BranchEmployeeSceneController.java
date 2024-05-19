@@ -117,7 +117,7 @@ public class BranchEmployeeSceneController implements Initializable {
             return;
         }
             if(branchPresupuesto==null || branchPresupuesto.isEmpty()){
-            warnMsg.setText("Ingresar el presupuesto de la sucursal.");
+            warnMsg.setText("Ingresar el presupuesto de la sucursal. ");
             bLoc.requestFocus();
             return;
         }
