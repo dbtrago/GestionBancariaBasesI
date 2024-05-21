@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -20,33 +22,32 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="30.666656494140625" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="74.33331298828125" minHeight="1.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="37.60000000000002" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="126.39999999999998" minHeight="10.0" prefHeight="33.60001220703123" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="134.19998779296873" minHeight="10.0" prefHeight="134.19998779296873" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="138.40000610351564" minHeight="10.0" prefHeight="131.1999938964844" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.33331298828125" minHeight="1.0" prefHeight="36.0000061035156" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="38.20000610351562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="36.79998779296875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="38.40000610351561" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="37.59998474121096" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="126.39999999999998" minHeight="10.0" prefHeight="37.600012207031284" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.19998779296873" minHeight="10.0" prefHeight="36.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="134.19998779296873" minHeight="10.0" prefHeight="36.80000000000001" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="143.39999999999998" minHeight="10.0" prefHeight="94.39998779296877" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.60001220703123" minHeight="10.0" prefHeight="41.60001220703123" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ToggleButton fx:id="acntHoldSceneBtn" mnemonicParsing="false" onAction="#setAcntHoldScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Cilentes" GridPane.rowIndex="3">
+            <ToggleButton fx:id="acntHoldSceneBtn" mnemonicParsing="false" onAction="#setAcntHoldScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Cilentes" GridPane.rowIndex="2">
                <toggleGroup>
                   <ToggleGroup fx:id="group1" />
                </toggleGroup>
             </ToggleButton>
-            <ToggleButton fx:id="brchEmpSceneBtn" mnemonicParsing="false" onAction="#setBrchEmpScene" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Sedes / Empleados" toggleGroup="$group1" GridPane.rowIndex="6" />
-            <ToggleButton fx:id="tranSceneBtn" mnemonicParsing="false" onAction="#setTranScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Transacciones" toggleGroup="$group1" GridPane.rowIndex="4" />
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="122.0" text="Banco" textFill="#344ceb" wrapText="true">
+            <ToggleButton fx:id="brchEmpSceneBtn" mnemonicParsing="false" onAction="#setBrchEmpScene" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Sedes / Empleados" toggleGroup="$group1" GridPane.rowIndex="5" />
+            <ToggleButton fx:id="tranSceneBtn" mnemonicParsing="false" onAction="#setTranScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Transacciones" toggleGroup="$group1" GridPane.rowIndex="3" />
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="122.0" text="Banco" textFill="#344ceb" wrapText="true" GridPane.rowIndex="1">
                <font>
                   <Font name="System Bold" size="30.0" />
                </font>
             </Label>
-            <ToggleButton fx:id="seviceBtn" mnemonicParsing="false" onAction="#setServiceScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Utilidades" toggleGroup="$group1" GridPane.rowIndex="5" />
+            <ToggleButton fx:id="seviceBtn" mnemonicParsing="false" onAction="#setServiceScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Utilidades" toggleGroup="$group1" GridPane.rowIndex="4" />
             <ToggleButton layoutX="10.0" layoutY="247.0" mnemonicParsing="false" onAction="#setReportsScene" prefHeight="32.0" prefWidth="122.0" styleClass="button" stylesheets="@../Styles/style.css" text="Reportes/Consultas" GridPane.rowIndex="7">
                <toggleGroup>
                   <ToggleGroup fx:id="group11" />
@@ -57,11 +58,21 @@
                   <ToggleGroup fx:id="group111" />
                </toggleGroup>
             </ToggleButton>
-            <ToggleButton fx:id="btnSalir" layoutX="10.0" layoutY="321.0" mnemonicParsing="false" onAction="#setActionSalir" prefHeight="32.0" prefWidth="122.0" styleClass="buttonSalir" stylesheets="@../Styles/style.css" text="Cerrar Sesión" textFill="RED" GridPane.rowIndex="11">
+            <ToggleButton fx:id="btnSalir" layoutX="10.0" layoutY="321.0" mnemonicParsing="false" onAction="#setActionSalir" prefHeight="32.0" prefWidth="122.0" styleClass="buttonSalir" stylesheets="@../Styles/style.css" text="Cerrar Sesión" textFill="RED" GridPane.rowIndex="10">
                <toggleGroup>
                   <ToggleGroup fx:id="group1111" />
                </toggleGroup>
             </ToggleButton>
+            <ToggleButton layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#setContratosScene" prefHeight="32.0" prefWidth="126.0" styleClass="button" stylesheets="@../Styles/style.css" text="Contratos" GridPane.rowIndex="6">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group12" />
+               </toggleGroup>
+            </ToggleButton>
+            <ImageView fitHeight="118.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icon.png" />
+               </image>
+            </ImageView>
          </children>
       </GridPane>
    </left>

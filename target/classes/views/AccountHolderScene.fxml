@@ -42,7 +42,7 @@
                   <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="466.0" text="Información de los titulares de cuentas" textFill="#02030a" GridPane.columnSpan="3">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="466.0" text="Información de los clientes" textFill="#02030a" GridPane.columnSpan="3">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -58,7 +58,7 @@
                   <TextField fx:id="cAdhaarId" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                   <ComboBox fx:id="cGenderCombo" prefHeight="26.0" prefWidth="168.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                   <ComboBox fx:id="cBranch" prefHeight="26.0" prefWidth="171.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-                  <Button fx:id="addCBtn" mnemonicParsing="false" onAction="#addCustomer" prefHeight="86.0" prefWidth="183.0" stylesheets="@../Styles/style.css" text="Create Account" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                  <Button fx:id="addCBtn" mnemonicParsing="false" onAction="#addCustomer" prefHeight="86.0" prefWidth="183.0" stylesheets="@../Styles/style.css" text="Crear cuenta" GridPane.columnIndex="2" GridPane.rowIndex="10" />
                   <ComboBox fx:id="cType" prefHeight="26.0" prefWidth="166.0" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                   <DatePicker fx:id="cDOB" styleClass="toggle-button" stylesheets="@../Styles/style.css" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                   <Label alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="103.0" text="Id Sucursal:" textFill="#02030a" GridPane.rowIndex="7" />

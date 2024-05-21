@@ -13,16 +13,14 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -53,7 +51,12 @@ public class BranchEmployeeSceneController implements Initializable {
     @FXML
     private TableView<?> eTableView;
     @FXML
-    private TextField eCargo;
+    private ComboBox<String> cmbCargo;
+    @FXML
+    private DatePicker dFinal;
+
+    @FXML
+    private DatePicker dInicio;
     @FXML
     private TextField eCedula;
     @FXML
@@ -88,7 +91,13 @@ public class BranchEmployeeSceneController implements Initializable {
         cBranch.setItems(branchList);
         
         empData.buildData(eTableView, "Select * from employeetable Order By (Id) desc;");
-        
+        ObservableList<String> genderList = FXCollections.observableArrayList();
+        genderList.add("Cajero");
+        genderList.add("Asesor");
+        genderList.add("Asesor especializado");
+        genderList.add("Subdirector");
+        genderList.add("Director");
+        cmbCargo.setItems(genderList);
     }    
  
     String branchCode="";
@@ -163,17 +172,21 @@ public class BranchEmployeeSceneController implements Initializable {
     String emplDireccion="";
     String emplProfesion= "";
     String emplTelefono="";
+    LocalDate contratoInicio;
+    LocalDate contratoFinal;
     
     @FXML
     private void addEmployee(ActionEvent event) {
         
         emplName = eName.getText();
         branchCode = cBranch.getValue();
-        emplCargo = eCargo.getText();
+        emplCargo = cmbCargo.getValue();
         emplCedula = eCedula.getText();
         emplDireccion = eDireccion.getText();
         emplProfesion = eProfesion.getText();
         emplTelefono = eTelefono.getText();
+        contratoInicio = dInicio.getValue();
+        contratoFinal = dFinal.getValue();
         
         if(branchCode==null || branchCode.isEmpty()){
            warnMsg.setText("Debe seleccionar el codigo de la sucursal.");
@@ -210,19 +223,20 @@ public class BranchEmployeeSceneController implements Initializable {
             eName.requestFocus();
             return;
         }
-         
-           
+
             Connection c;
             try{
             c = DBConnection.getConnection();
-            String query = "INSERT INTO employeetable (Name,Branch,cedula,telefono,cargo,profesion,direccion) VALUES("+
+            String query = "INSERT INTO employeetable (Name,Branch,cedula,telefono,cargo,profesion,direccion,inicioContrato,finContrato) VALUES("+
                     "'"+ emplName +"',\n" +
                     "'"+branchCode+"',\n" +
                     "'"+emplCedula+"',\n" +
                     "'"+emplTelefono+"',\n" +
                     "'"+emplCargo+"',\n" +
                     "'"+emplProfesion+"',\n" +
-                    "'"+emplDireccion+"');";
+                    "'"+emplDireccion+"',\n"+
+                    "'"+contratoInicio+"',\n"+
+                    "'"+contratoFinal+"');";
           
             c.createStatement().execute(query);
             
@@ -233,15 +247,12 @@ public class BranchEmployeeSceneController implements Initializable {
         }
             
         eName.clear();
-        eCargo.clear();
         eCedula.clear();
         eDireccion.clear();
         eProfesion.clear();
         eTelefono.clear();
-
         empData.buildData(eTableView, "Select * from employeetable Order By (Id) desc;");
-           
-           
+
     }
 
     @FXML
@@ -256,7 +267,6 @@ public class BranchEmployeeSceneController implements Initializable {
         query = "Select * from employeetable;";
         
         }
-        
         
           empData.buildData(eTableView,query);
     }
