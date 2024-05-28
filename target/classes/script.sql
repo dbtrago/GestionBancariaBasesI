@@ -116,3 +116,27 @@ ALTER TABLE `servicetable`
   ADD CONSTRAINT `fk_tranTable` FOREIGN KEY (`TransactionId`) REFERENCES `transactiontable` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
+CREATE TABLE cargo (
+codigo INT PRIMARY KEY, -- Identificador único del cargo
+nombre VARCHAR(100) NOT NULL, -- Nombre del cargo, no puede ser nulo
+salario DECIMAL(10, 2) NOT NULL, -- Salario del cargo, con hasta 10 dígitos y 2 decimales, no puede ser nulo
+funciones TEXT -- Descripción de las funciones del cargo
+);
+
+-- Insertar datos en la tabla cargo
+INSERT INTO cargo (codigo, nombre, salario, funciones) VALUES
+(1, 'Cajero', 1200000.00, 'Atender a los clientes, realizar transacciones financieras, manejo de efectivo.'),
+(2, 'Asesor', 1800000.00, 'Brindar asesoramiento a los clientes sobre productos y servicios, resolver consultas.'),
+(3, 'Asesor especializado', 2200000.00, 'Proporcionar asesoramiento especializado en productos financieros, capacitar a otros asesores.'),
+(4, 'Subdirector', 3000000.00, 'Supervisar las operaciones diarias, apoyar al director en la toma de decisiones, gestión de personal.'),
+(5, 'Director', 5000000.00, 'Dirigir la estrategia y operaciones generales de la empresa, tomar decisiones ejecutivas, liderar al equipo directivo.');
+
+CREATE TABLE profesion ( codigo INT PRIMARY KEY, nombre VARCHAR(100)NOT NULL);
+
+CREATE TABLE municipio (
+                           codigo INT PRIMARY KEY, -- Suponiendo que el código es un identificador único
+                           nombre VARCHAR(100) NOT NULL, -- Nombre del municipio con un límite de 100 caracteres
+                           profesion VARCHAR(100) NOT NULL -- Profesión con un límite de 100 caracteres
+);
+
+

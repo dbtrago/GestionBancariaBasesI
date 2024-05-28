@@ -7,15 +7,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="748.0" style="-fx-background-color: #F4F7FC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.ContratosController">
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="1315.0" style="-fx-background-color: #F4F7FC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.ContratosController">
     <children>
-      <TableView fx:id="eTableView" layoutX="131.0" layoutY="112.0" prefHeight="366.0" prefWidth="906.0" stylesheets="@../Styles/style.css" />
-      <TextField fx:id="txtCedulaBuscar" layoutX="460.0" layoutY="71.0" promptText="Cédula" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" />
-        <Label layoutX="460.0" layoutY="45.0" text="Contratos de trabajo empleados">
+      <TableView fx:id="eTableView" layoutX="297.0" layoutY="136.0" prefHeight="339.0" prefWidth="835.0" stylesheets="@../Styles/style.css" />
+      <TextField fx:id="txtCedulaBuscar" layoutX="594.0" layoutY="71.0" promptText="Cédula" styleClass="text-field-buscar" stylesheets="@../Styles/style.css" />
+        <Label layoutX="594.0" layoutY="38.0" text="Contratos de trabajo empleados">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
         </Label>
-      <Button fx:id="btnBuscar" layoutX="621.0" layoutY="72.0" mnemonicParsing="false" onAction="#searchEmployee" prefHeight="26.0" prefWidth="86.0" stylesheets="@../Styles/style.css" text="Buscar" />
+      <Button fx:id="btnBuscar" layoutX="755.0" layoutY="72.0" mnemonicParsing="false" onAction="#searchEmployee" prefHeight="26.0" prefWidth="86.0" stylesheets="@../Styles/style.css" text="Buscar" />
+      <TableView fx:id="eTableCargo" layoutX="297.0" layoutY="533.0" prefHeight="244.0" prefWidth="835.0" stylesheets="@../Styles/style.css" />
+      <Label layoutX="297.0" layoutY="493.0" text="Cargos">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="98.0" text="Empleados">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

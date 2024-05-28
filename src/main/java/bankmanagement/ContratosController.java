@@ -27,10 +27,15 @@ public class ContratosController implements Initializable {
     private TableView<?> eTableView;
 
     @FXML
+    private TableView<?> eTableCargo;
+
+    @FXML
     private TextField txtCedulaBuscar;
 
     ObservableList<String> branchList = FXCollections.observableArrayList();
     DisplayDatabase empData = new DisplayDatabase();
+
+    DisplayDatabase dataCargos = new DisplayDatabase();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -47,6 +52,7 @@ public class ContratosController implements Initializable {
         }
 
         empData.buildData(eTableView, "Select * from employeetable;");
+        dataCargos.buildData(eTableCargo, "Select * from cargo;");
     }
     @FXML
     private void searchEmployee(ActionEvent event) {

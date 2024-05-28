@@ -54,7 +54,8 @@ public class BranchEmployeeSceneController implements Initializable {
     private ComboBox<String> cmbCargo;
     @FXML
     private DatePicker dFinal;
-
+    @FXML
+    private ComboBox<String> cmbTipoMunicipio;
     @FXML
     private DatePicker dInicio;
     @FXML
@@ -98,6 +99,12 @@ public class BranchEmployeeSceneController implements Initializable {
         genderList.add("Subdirector");
         genderList.add("Director");
         cmbCargo.setItems(genderList);
+        ObservableList<String> municipioList = FXCollections.observableArrayList();
+        municipioList.add("Muy importante");
+        municipioList.add("Importante");
+        municipioList.add("Medianamente importante ");
+        municipioList.add("Poco importante");
+        cmbTipoMunicipio.setItems(municipioList );
     }    
  
     String branchCode="";
