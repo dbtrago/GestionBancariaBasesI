@@ -115,6 +115,7 @@ public class LoginController {
                         // Obtener la contraseña del resultado
                         passEncontrada = resultSet.getString("clave");
 
+
                         // Mostrar la contraseña por consola
                         System.out.println("La contraseña para el usuario " + usuarioBuscado + " es: " + passEncontrada);
                     } else {

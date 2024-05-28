@@ -36,12 +36,19 @@ public class generarReporte {
         // Cargar el archivo JasperReport compilado
         JasperReport jasperReport = null;
         try {
-            File reportFile = new File("src/main/java/util/EmployeeReport.jasper");
+            File reportFile = new File("src/main/resources/Reports/TransaccionReport.jasper");
             jasperReport = (JasperReport) JRLoader.loadObject(reportFile);
         } catch (JRException e) {
             e.printStackTrace();
         }
-
+/*
+* src/main/resources/Reports/ContratosReport.jasper
+* src/main/resources/Reports/CargosReport.jasper
+* src/main/resources/Reports/EmployeeReport.jasper
+* src/main/resources/Reports/ServiciosReport.jasper
+* src/main/resources/Reports/SucursalReport.jasper
+* src/main/resources/Reports/TransaccionReport.jasper
+* */
         // Parámetros del informe
         Map<String, Object> parameters = new HashMap<>();
 
